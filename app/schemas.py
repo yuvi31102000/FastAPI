@@ -16,6 +16,7 @@ class PostCreate(PostBase):       # Inherits from PostBase, used for creating a 
 class UserCreate(BaseModel):      # Base model for user data
     email_id: EmailStr            # Using EmailStr for email validation
     password: str
+    phone_number: str
 
 class UserLogin(BaseModel):       # Base model for user login data
     email_id: EmailStr  
@@ -41,6 +42,7 @@ class UserResponse(BaseModel):
     id: int
     email_id: EmailStr
     created_at: datetime
+    phone_number: str
 
     class Config:
         orm_mode = True
